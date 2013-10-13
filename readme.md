@@ -1,4 +1,4 @@
-BTNAutoUp
+AutoUp-BTN
 =========
 
 This script will take an input video file, save its mediainfo, create a torrent file and upload it to BTN.
