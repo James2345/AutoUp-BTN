@@ -14,4 +14,4 @@ THIS SCRIPT IS NOT FINISHED AND IS EXTREMELY EXPERIMENTAL.
 ## Instructions
 
 1. Edit btn.py and fill in the required fields.
-2. Run it - `python btn.py tvepisode.mkv`
+2. Run it - `python btn.py TV.Show.S01E01.720p.HDTV.x264-BTN`
