@@ -15,3 +15,9 @@ THIS SCRIPT IS NOT FINISHED AND IS EXTREMELY EXPERIMENTAL.
 
 1. Edit btn.py and fill in the required fields.
 2. Run it - `python btn.py TV.Show.S01E01.720p.HDTV.x264-BTN.mkv`
+
+## To Do
+
+* Unrar support
+* Better error checking
+* Support for series uploads
