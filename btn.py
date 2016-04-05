@@ -33,17 +33,27 @@ import os
 import re
 import subprocess
 import mechanize
+import cfscrape
 sys.argv.remove(sys.argv[0])
+
+######################################################
+# Get Cloudflare cookies
+######################################################
+print "Fetching Cloudflare cookies ..."
+cookies = cfscrape.get_cookie_string("http://broadcasthe.net/login.php", "Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.157 Safari/537.36");
 
 ######################################################
 # Log into BTN
 ######################################################
 print "Logging into BTN..."
 br = mechanize.Browser()
+cj = mechanize.LWPCookieJar()
+br.set_cookiejar(cj)
+
 # Set some headers
 br.set_handle_robots(False)
-br.addheaders = [('User-agent', 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/535.11 (KHTML, like Gecko) \
-       	        Chrome/17.0.963.56 Safari/535.11')]
+br.addheaders = [('User-agent', 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.157 Safari/537.36'), ('cookie', cookies[0])]
+
 # Open the login page
 br.open("https://broadcasthe.net/login.php")
 
